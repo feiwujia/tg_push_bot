@@ -52,9 +52,13 @@ module.exports = {
 ### 安装Node.js环境
 
 1. 安装Nodejs，参考[Download Node.js](https://nodejs.org/en/download/current/)
-2. 执行``npm install``安装依赖（与``package.json``同目录下）
-3. 执行``npm install -g pm2``安装pm2模块
-4. 执行``pm2 start server.js``启动服务端
+2. 执行``npm install -g n``安装n模块
+3. 执行``n 8.17.0``将nodejs版本切换成v8.17.0（实测node v8.17.0和npm v6.13.4可运行，node 9、10、12、18运行不了）
+4. 执行``hash -r``使nodejs版本切换生效
+5. 执行``npm install``安装依赖（与``package.json``同目录下）
+6. 执行``npm install -g pm2``安装pm2模块（pm2 v3.5.2可运行，pm2 v4.x.x运行不了）
+7. 执行``pm2 start server.js``启动服务端
+   
 
 ### 设置Bot webhook地址
 
